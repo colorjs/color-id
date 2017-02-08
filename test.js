@@ -13,3 +13,5 @@ assert.equal(toNumber([0,1,1,0]), 0x00ffff00)
 assert.equal(toNumber([1,1,1]), 0xffffffff)
 assert.equal(toNumber([2,1,1]), 0xffffffff)
 assert.equal(toNumber([-1,-1,-1,-1]), 0)
+
+// console.log(toNumber([.1, .5, .5, .1]).toString(16))

@@ -7,7 +7,7 @@ Convert color channels to single integer. Useful to get an id for a color.
 ```js
 const colorId = require('color-id');
 
-colorId([.1, .5, .5, .1]); //
+colorId([.1, .5, .5, .1]); // 0x197f7f19
 ```
 
 ## `colorId(channels, normalized = true)`
@@ -17,6 +17,6 @@ Get id for normalized to 0..1 rgb[a] channel values. Optionally pass normalized 
 
 ## Related
 
-> [color-interpolate](https://github.com/dfcreative/color-interpolate) — interpolate color over palette, colormap or gradient.
-> [color-rgba](https://github.com/dfcreative/color-rgba) — convert color string to rgba array.
+> [color-interpolate](https://github.com/dfcreative/color-interpolate) — interpolate color over palette, colormap or gradient.<br/>
+> [color-rgba](https://github.com/dfcreative/color-rgba) — convert color string to rgba array.<br/>
 > [color-alpha](https://github.com/dfcreative/color-alpha) — change alpha channel for a color.
