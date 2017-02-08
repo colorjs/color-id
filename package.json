@@ -1,6 +1,6 @@
 {
   "name": "color-id",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Get integer id for a color",
   "main": "index.js",
   "scripts": {
