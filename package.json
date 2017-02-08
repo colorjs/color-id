@@ -1,0 +1,25 @@
+{
+  "name": "color-id",
+  "version": "1.0.0",
+  "description": "Get integer id for a color",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dfcreative/color-id.git"
+  },
+  "keywords": [
+    "color"
+  ],
+  "author": "Dima Yv <dfcreative@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dfcreative/color-id/issues"
+  },
+  "homepage": "https://github.com/dfcreative/color-id#readme",
+  "dependencies": {
+    "clamp": "^1.0.1"
+  }
+}
