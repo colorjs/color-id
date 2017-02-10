@@ -2,12 +2,14 @@
 
 'use strict'
 
-const clamp = require('clamp')
+var clamp = require('clamp')
 
 module.exports = toNumber
 
-function toNumber (rgba, normalized = true) {
-	let r = rgba[0], g = rgba[1], b = rgba[2], a = rgba[3]
+function toNumber (rgba, normalized) {
+	if(!normalized) normalized = true
+
+	var r = rgba[0], g = rgba[1], b = rgba[2], a = rgba[3]
 
 	if (a == null) a = normalized ? 1 : 255
 
@@ -24,7 +26,7 @@ function toNumber (rgba, normalized = true) {
 	a = clamp(a, 0, 255) & 0xFF
 
 	//hi-order shift converts to -1, so we can't use <<24
-	let n = (r * 0x01000000) + (g << 16) + (b << 8) + (a)
+	var n = (r * 0x01000000) + (g << 16) + (b << 8) + (a)
 
 	return n
 }
