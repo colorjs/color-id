@@ -7,7 +7,7 @@ var clamp = require('clamp')
 module.exports = toNumber
 
 function toNumber (rgba, normalized) {
-	if(!normalized) normalized = true
+	if(normalized == null) normalized = true
 
 	var r = rgba[0], g = rgba[1], b = rgba[2], a = rgba[3]
 
