@@ -1,5 +1,7 @@
 # color-id [![unstable](http://badges.github.io/stability-badges/dist/unstable.svg)](http://github.com/badges/stability-badges)
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/colorjs/color-id.svg)](https://greenkeeper.io/)
+
 Convert color channels to single integer. Useful to get an id for a color.
 
 [![npm install color-id](https://nodei.co/npm/color-id.png?mini=true)](https://npmjs.org/package/color-id/)
