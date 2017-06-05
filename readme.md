@@ -1,4 +1,4 @@
-# color-id [![unstable](http://badges.github.io/stability-badges/dist/unstable.svg)](http://github.com/badges/stability-badges)
+# color-id [![unstable](https://img.shields.io/badge/stability-unstable-green.svg)](http://github.com/badges/stability-badges) [![Build Status](https://img.shields.io/travis/colorjs/color-id.svg)](https://travis-ci.org/colorjs/color-id)
 
 Convert color channels to single integer. Useful to get an id for a color.
 
