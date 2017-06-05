@@ -1,6 +1,6 @@
 # color-id [![unstable](https://img.shields.io/badge/stability-unstable-green.svg)](http://github.com/badges/stability-badges) [![Build Status](https://img.shields.io/travis/colorjs/color-id.svg)](https://travis-ci.org/colorjs/color-id)
 
-Convert color channels to single integer. Useful to get an id for a color.
+Convert color channels to single integer and back. Useful to get an id for a color.
 
 [![npm install color-id](https://nodei.co/npm/color-id.png?mini=true)](https://npmjs.org/package/color-id/)
 
