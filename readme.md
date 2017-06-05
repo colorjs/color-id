@@ -10,10 +10,13 @@ const colorId = require('color-id');
 colorId([.1, .5, .5, .1]); // 0x197f7f19
 ```
 
-## `colorId(channels, normalized = true)`
+## `colorId(channels, normalized=true)`
 
 Get id for normalized to 0..1 rgb[a] channel values. Optionally pass normalized flag to indicate that values are normalized to 0..1 range, defaults to `true`.
 
+## `colorId.from(number, normalized=true)`
+
+Get color channels values from the color id. Optionally pass normalized flag to align values to `0..1` range.
 
 ## Related
 

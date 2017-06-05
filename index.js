@@ -1,10 +1,12 @@
-/** @module  color-number */
+/** @module  color-id */
 
 'use strict'
 
 var clamp = require('clamp')
 
 module.exports = toNumber
+module.exports.to = toNumber
+module.exports.from = fromNumber
 
 function toNumber (rgba, normalized) {
 	if(normalized == null) normalized = true
@@ -29,4 +31,17 @@ function toNumber (rgba, normalized) {
 	var n = (r * 0x01000000) + (g << 16) + (b << 8) + (a)
 
 	return n
+}
+
+function fromNumber (n, normalized) {
+	n = +n
+
+	var r = n >>> 24
+	var g = (n & 0x00ff0000) >>> 16
+	var b = (n & 0x0000ff00) >>> 8
+	var a = n & 0x000000ff
+
+	if (normalized === false) return [r, g, b, a]
+
+	return [r/255, g/255, b/255, a/255]
 }

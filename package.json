@@ -8,18 +8,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dfcreative/color-id.git"
+    "url": "git+https://github.com/colorjs/color-id.git"
   },
   "keywords": [
-    "color"
+    "color",
+    "colorjs"
   ],
   "author": "Dima Yv <dfcreative@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/dfcreative/color-id/issues"
+    "url": "https://github.com/colorjs/color-id/issues"
   },
-  "homepage": "https://github.com/dfcreative/color-id#readme",
-  "dependencies": {
-    "clamp": "^1.0.1"
-  }
+  "homepage": "https://github.com/colorjs/color-id#readme"
 }
