@@ -2,11 +2,16 @@
 
 'use strict'
 
-var clamp = require('clamp')
-
 module.exports = toNumber
 module.exports.to = toNumber
 module.exports.from = fromNumber
+
+function clamp(value, min, max) {
+  return min < max
+    ? (value < min ? min : value > max ? max : value)
+    : (value < max ? max : value > min ? min : value)
+}
+
 
 function toNumber (rgba, normalized) {
 	if(normalized == null) normalized = true
