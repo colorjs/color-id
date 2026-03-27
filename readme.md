@@ -1,4 +1,4 @@
-# color-id
+# color-id [![test](https://github.com/colorjs/color-id/actions/workflows/test.yml/badge.svg)](https://github.com/colorjs/color-id/actions/workflows/test.yml)
 
 Pack RGBA color channels into a single uint32 integer and back.
 
@@ -42,4 +42,5 @@ Unpack uint32 into `[r, g, b, a]` channels.
 
 ## License
 
-MIT
+
+<p align=center><a href="./LICENSE">MIT</a> • <a href="https://github.com/krishnized/license/">ॐ</a></p>
