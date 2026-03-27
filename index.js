@@ -1,52 +1,16 @@
-/** @module  color-id */
+export { to as default, to, from }
 
-'use strict'
+to.from = from
 
-module.exports = toNumber
-module.exports.to = toNumber
-module.exports.from = fromNumber
-
-function clamp(value, min, max) {
-  return min < max
-    ? (value < min ? min : value > max ? max : value)
-    : (value < max ? max : value > min ? min : value)
+function to(rgba, normalized = true) {
+	let [r, g, b, a = normalized ? 1 : 255] = rgba
+	if (normalized) { r *= 255; g *= 255; b *= 255; a *= 255 }
+	return (byte(r) << 24 | byte(g) << 16 | byte(b) << 8 | byte(a)) >>> 0
 }
 
-
-function toNumber (rgba, normalized) {
-	if(normalized == null) normalized = true
-
-	var r = rgba[0], g = rgba[1], b = rgba[2], a = rgba[3]
-
-	if (a == null) a = normalized ? 1 : 255
-
-	if (normalized) {
-		r *= 255
-		g *= 255
-		b *= 255
-		a *= 255
-	}
-
-	r = clamp(r, 0, 255) & 0xFF
-	g = clamp(g, 0, 255) & 0xFF
-	b = clamp(b, 0, 255) & 0xFF
-	a = clamp(a, 0, 255) & 0xFF
-
-	//hi-order shift converts to -1, so we can't use <<24
-	var n = (r * 0x01000000) + (g << 16) + (b << 8) + (a)
-
-	return n
+function from(n, normalized = true) {
+	const r = n >>> 24, g = (n >>> 16) & 0xFF, b = (n >>> 8) & 0xFF, a = n & 0xFF
+	return normalized ? [r / 255, g / 255, b / 255, a / 255] : [r, g, b, a]
 }
 
-function fromNumber (n, normalized) {
-	n = +n
-
-	var r = n >>> 24
-	var g = (n & 0x00ff0000) >>> 16
-	var b = (n & 0x0000ff00) >>> 8
-	var a = n & 0x000000ff
-
-	if (normalized === false) return [r, g, b, a]
-
-	return [r/255, g/255, b/255, a/255]
-}
+function byte(v) { return (v > 255 ? 255 : v < 0 ? 0 : v) & 0xFF }

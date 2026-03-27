@@ -1,19 +1,19 @@
 {
   "name": "color-id",
   "version": "1.1.0",
-  "description": "Get integer id for a color",
-  "main": "index.js",
+  "description": "Pack RGBA color channels into uint32 and back",
+  "type": "module",
+  "exports": "./index.js",
+  "types": "./index.d.ts",
+  "files": ["index.js", "index.d.ts"],
   "scripts": {
-    "test": "node test"
+    "test": "node --test test.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/colorjs/color-id.git"
   },
-  "keywords": [
-    "color",
-    "colorjs"
-  ],
+  "keywords": ["color", "rgba", "pack", "uint32", "colorjs"],
   "author": "Dmitry Iv. <dfcreative@gmail.com>",
   "license": "MIT",
   "bugs": {
